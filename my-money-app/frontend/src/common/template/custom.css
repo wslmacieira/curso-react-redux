@@ -1,0 +1,10 @@
+.main-footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%
+}
+
+.content {
+    min-height: 0%;
+    padding: 0px 15px;
+}
