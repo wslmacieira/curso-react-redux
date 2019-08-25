@@ -8,3 +8,11 @@
     min-height: 0%;
     padding: 0px 15px;
 }
+
+button {
+    margin-left: 5px;
+}
+
+.table-actions {
+    width: 150px;
+}
