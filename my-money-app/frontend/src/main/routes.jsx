@@ -1,16 +1,16 @@
 import React from 'react'
-import { Router, Route, IndexRoute, Redirect, hashHistory } from 'react-router'
+import { Switch, Route, Redirect } from 'react-router'
 
 import AuthOrApp from './authOrApp'
 import Dashboard from '../dashboard2/dashboard2'
-import BillingCycles from '../billingCycles/billingCycles'
+import BillingCycle from '../billingCycles/billingCycles'
 
 export default props => (
-    <Router history={hashHistory}>
-        <Route path='/' component={AuthOrApp}>
-            <IndexRoute component={Dashboard} />
-            <Route path='billingCycles' component={BillingCycles} />
-        </Route>
-        <Redirect from='*' to='/' />
-    </Router>
+    <div className="content-wrapper">
+        <Switch>
+            <Route exact path='/' component={Dashboard} />
+            <Route exact path='/billingCycles' component={BillingCycle} />
+            <Redirect from='*' to='/' />
+        </Switch>
+    </div>
 )
